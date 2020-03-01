@@ -1,0 +1,191 @@
+:root {
+  --gryffindor-color: #7f0909;
+  --gryffindor-color2: #ffc500;
+  --ravenclaw-color: #111b52;
+  --ravenclaw-color2: #fcf7ed;
+  --slytherin-color: #0b400c;
+  --slytherin-color2: #f0f5f0;
+  --hufflepuff-color: #eed817;
+  --hufflepuff-color2: #000000;
+}
+
+@font-face {
+  font-family: AvenirNextLTPro-Regular;
+  src: url(Avenir-Next-Font/AvenirNextLTPro-Regular.otf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Abril Fatface";
+  font-size: 30px;
+  color: #ebd5b3;
+}
+
+#index-page {
+  background-color: #9d1730;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1em 0 0 1em;
+}
+
+#title {
+  color: #ebd5b3;
+  margin-left: 60px;
+  font-family: "Abril Fatface";
+}
+
+#logo {
+  height: 200px;
+  float: inherit;
+}
+
+/*Filtering and sorting + information about the list*/
+.settings-about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1em 0 1em;
+}
+
+/*STUDENTS displayed on front page*/
+#student {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+article {
+  background-color: #ebd5b3;
+  border: 1px solid black;
+  max-width: 100%;
+  box-shadow: 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em 1em 1em;
+  color: #000000;
+}
+
+.crest {
+  height: 150px;
+}
+
+.list-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*Expelling animation*/
+.fallDown {
+  animation: fallDown 2s;
+}
+
+@keyframes fallDown {
+  10% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+}
+
+/*MODAL STYLING*/
+
+.modalbg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modalphoto {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.student-details {
+  margin-left: 30px;
+}
+
+/* Exit from MODAL */
+.exit {
+  color: #ffffff;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+  padding-right: 1em;
+}
+
+.exit:hover,
+.exit:focus {
+  color: #b0ac99;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 1em;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.gryffindor {
+  background-color: var(--gryffindor-color);
+  color: var(--gryffindor-color2);
+}
+
+.ravenclaw {
+  background-color: var(--ravenclaw-color);
+  color: var(--ravenclaw-color2);
+}
+
+.slytherin {
+  background-color: var(--slytherin-color);
+  color: var(--slytherin-color2);
+}
+.hufflepuff {
+  background-color: var(--hufflepuff-color);
+  color: var(--hufflepuff-color2);
+}
+
+.addToInquisitorialSquadButton {
+  display: none;
+}
+
+.inquisitorial {
+  display: none;
+}
+
+.prefect {
+  display: none;
+}

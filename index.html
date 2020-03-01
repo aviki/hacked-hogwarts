@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HACKED HOGWARTS STUDENT LIST</title>
+    <link rel="stylesheet" href="hogwarts.css" />
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+
+  <body id="index-page">
+    <div class="title-wrapper">
+      <a href="index.html"><img id="logo" src="images/logo.png" alt="Hogwarts hatchment"/></a>
+      <h1 id="title">HOGWARTS STUDENT LIST OF '91</h1>
+    </div>
+    <div class="settings-about">
+      <div class="settings">
+        <label>Show:</label>
+        <select id="filterSelector">
+          <option value="1">Only Gryffindor students</option>
+          <option value="2">Only Slytherin students</option>
+          <option value="3">Only Hufflepuff students</option>
+          <option value="4">Only Ravenclaw students</option>
+          <option value="5">Only expelled students</option>
+          <option value="6">Only non-expelled students</option>
+          <option value="7">All students</option>
+        </select>
+        <button type="button" onclick="filter()">Filter</button><br />
+
+        <label>Sort by:</label>
+        <select id="sortingSelector">
+          <option value="1">First name ▲</option>
+          <option value="2">First name ▼</option>
+          <option value="3">Last name ▲</option>
+          <option value="4">Last name ▼</option>
+          <option value="5">House ▲</option>
+          <option value="6">House ▼</option>
+        </select>
+        <button type="button" onclick="sort()">Sort!</button><br />
+        <label>Search:</label>
+        <input type="text" oninput="search()" id="searchText" />
+        <label>in:</label>
+        <select id="searchingProperty">
+          <option value="1">First name</option>
+          <option value="2">Last name</option>
+        </select>
+      </div>
+      <div class="about">
+        <h3>Nr. of Students: <span id="studentCount"></span></h3>
+        <h3>Nr. of expelled Students: <span id="expelledStudentCount"></span></h3>
+        <h3>Nr. of displayed Students: <span id="displayedStudentCount"></span></h3>
+      </div>
+      <div class="about-houses">
+        <h3>Nr. of Students in Gryffindor: <span id="gryffindorCount"></span></h3>
+        <h3>Nr. of Students in Slytherin: <span id="slytherinCount"></span></h3>
+        <h3>Nr. of Students in Ravenclaw: <span id="ravenclawCount"></span></h3>
+        <h3>Nr. of Students in Hufflepuff: <span id="hufflepuffCount"></span></h3>
+      </div>
+    </div>
+
+    <div id="student"></div>
+    <template>
+      <article>
+        <div class="container" id="animation">
+          <div class="list-content">
+            <p class="prefect">🥇</p>
+            <img class="photo" src="" alt="" />
+            <h2 class="name">Student's Name</h2>
+            <h2 class="house">House</h2>
+            <p class="inquisitorial">🐍</p>
+            <p class="expelled">❌</p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <div class="modalbg">
+      <div class="modal">
+        <article>
+          <div class="modalcontainer">
+            <p class="exit">&times;</p>
+            <img class="modalphoto" src="" alt="" />
+            <img class="crest" src="" alt="" />
+            <div class="student-details">
+              <h3>Name: <span class="modalname"></span></h3>
+              <h3>House: <span class="modalhouse"></span></h3>
+              <h3>Blood Status: <span class="modalblood"></span></h3>
+              <h3>Perfect Status: <span class="modalprefect"></span></h3>
+              <h3>Expelled Status: <span class="modalexpelled"></span></h3>
+              <button class="addToInquisitorialSquadButton">Add to inquisitorial squad</button>
+              <button class="makePrefectButton">Make prefect</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <script defer src="scripts.js"></script>
+  </body>
+</html>
